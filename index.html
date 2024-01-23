@@ -61,7 +61,23 @@
 
     <!-- static camera that moves according to the device movemenents -->
     <a-entity id="camera" camera position="0 0 10"></a-entity>
-    
+
+    <a-assets>
+
+      <video id="video1" 
+        src="assets/video1.mp4"
+        preload="auto"  
+        loop="true" 
+        playsinline
+        webkit-playsinline 
+        autoplay 
+        crossorigin="anonymous">
+      </video>
+  
+    </a-assets>
+  
+  
+  
     <!-- a-nft is the anchor that defines an Image Tracking entity -->
     <!-- on 'url' use the path to the Image Descriptors created before. -->
     <!-- The file path should end with the name WITHOUT the extension & ONLY ONCE
@@ -77,12 +93,14 @@
   
       <!-- As a child of the a-nft entity, define the content to show. -->
   
-      <a-entity position="0 0 0" rotation="0 0 0"
-          animation="property: rotation; to: 0 360 0;easing:linear; loop: true; dur: 25000">
-          <a-sphere position="6  0 -5" radius="0.3"
-              src="https://cdn.glitch.com/850dd813-e5e9-4dd0-9751-38981ae74172%2Fvenus.jpg?v=1604312437571">
-          </a-sphere>
-      </a-entity>
+      <a-video id="vid1" 
+        src="#video1" 
+        width="600" 
+        height="509" 
+        position="0 0 5" 
+        rotation="-90 0 0"
+        play-on-click>
+      </a-video>
   
     </a-nft>
 
